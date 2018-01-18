@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Apartamenty Milka</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <header>
+        <div id="navigation">
+            <img src="../images/logoMale.jpg" alt="logo">
+            <nav>
+                <i class="fa fa-bars" aria-hidden="true"></i>
+                <ul id="navigationList">
+                    <li><a href="../index.html">Strona główna</a></li>
+                    <li><a href="../rezerwacje/index.html">Rezerwacje</a></li>
+                    <li><a href="../galeria/index.html">Galeria</a></li>
+                    <li><a class="active" href="#">Cennik</a></li>
+                    <li><a href="../kontakt/index.html">Kontakt</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div id="example_gallery">
+            <!--        <img src="images/1.jpg">-->
+            <img class="mySlides" src="../images/1.jpg" style="width:100%">
+            <img class="mySlides" src="../images/2.jpg" style="width:100%">
+            <img class="mySlides" src="../images/3.jpg" style="width:100%">
+            <img class="mySlides" src="../images/4.jpg" style="width:100%">
+
+            <button id="arrowL" class="arrows" onclick="plusDivs(-1)"><i class="fa fa-chevron-left" aria-hidden="true"></i></button>
+            <button id="arrowR" class="arrows" onclick="plusDivs(1)"><i class="fa fa-chevron-right" aria-hidden="true"></i></button>
+        </div>
+    </header>
+    <main>
+        <div id="mainInfo">
+            <h3>Cennik</h3>
+            <table id="rooms">
+                <tr>
+                    <th></th>
+                    <th>LATO / ZIMA</th>
+                    <th>WIOSNA / JESIEŃ</th>
+                </tr>
+                <tr>
+                    <td>Pokój jednoosobowy</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Pokój dwuosobowy</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Pokój trzyosobowy</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+                <tr>
+                    <td>Pokój czteroosobowy</td>
+                    <td>x</td>
+                    <td>x</td>
+                </tr>
+            </table>
+            <p id="information">1. Info pierwsze.<br>2. Info drugie.</p>
+        </div>
+    </main>
+    <footer>
+        <div>
+            <h3> Kontakt </h3>
+            <p>Apartamenty Milka<br><br> telefon: +48 000000000<br> email: blablabla@gmail.com</p>
+        </div>
+        <p id="copyright">Iwona Gajewska © Wszelkie prawa zastrzeżone 2017.</p>
+    </footer>
+    <script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+
+</html>

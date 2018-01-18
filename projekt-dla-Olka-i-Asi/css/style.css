@@ -1,0 +1,425 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    display: block;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+header {
+    height: 90vh;
+    width: 100%;
+    background-color: white;
+    margin 0;
+    padding: 0;
+}
+
+.fa-bars {
+    position: absolute;
+    right: 7%;
+    top: 20%;
+    font-size: 3rem;
+    color: #5B321E;
+}
+
+#navigation {
+    width: 100%;
+    height: 10%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: white;
+    border-bottom: 0.1rem solid #5B321E;
+}
+
+#navigationList {
+    display: none;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    top: 10%;
+    right: 0;
+    z-index: 1;
+}
+
+li a {
+    text-decoration: none;
+    display: block;
+    color: #5B321E;
+    padding: 8px 16px;
+    font-size: 1.6rem;
+    font-weight: 550;
+    background-color: #f1f1f1;
+}
+
+li a.active {
+    background-color: #5B321E;
+    color: white;
+}
+
+li a:hover:not(.active) {
+    background-color: #5B321E;
+    color: white;
+}
+
+#navigation img {
+    transform: translateX(1rem);
+}
+
+#example_gallery {
+    position: relative;
+    top: 10%;
+    height: 90%;
+
+}
+
+.mySlides {
+    height: 100%;
+}
+
+.arrows {
+    height: 4rem;
+    width: 4rem;
+    border: 1px solid #444;
+    background-color: #444;
+    border-radius: 50%;
+    text-align: center;
+    opacity: 0.8;
+}
+
+#arrowL {
+    position: absolute;
+    top: 50%;
+    left: 2%;
+    margin-top: -1.3rem;
+}
+
+#arrowR {
+    position: absolute;
+    top: 50%;
+    right: 2%;
+    margin-top: -1.3rem;
+}
+
+#arrowL:hover,
+#arrowR:hover {
+    opacity: 1;
+}
+
+.fa-chevron-left,
+.fa-chevron-right {
+    color: white;
+    font-size: 1.4rem;
+}
+
+main {
+    min-height: 90vh;
+    background-color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#mainInfo {
+    font-size: 2rem;
+    margin: 2rem;
+    overflow: hidden;
+}
+
+#mainInfo h3 {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: 'Lobster', cursive;
+    color: #5B321E;
+}
+
+#mainInfo h6 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+#mainInfo p {
+    margin: 2rem;
+}
+
+#information {
+    font-size: 1.2rem;
+}
+
+#rooms {
+    font-size: 1.6rem;
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 100%;
+    height: 50vh;
+}
+
+#rooms td,
+#rooms th {
+    padding: 0.5rem;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+#rooms tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#rooms th {
+    background-color: #864a2d;
+    color: white;
+}
+
+#rooms tr > :first-child {
+    text-align: left;
+}
+
+.flex-container {
+    display: flex;
+    height: 70vh;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.flex-container div {
+    flex-basis: 40%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.flex-container p {
+    margin: 0.5rem !important;
+    font-size: 2rem;
+}
+
+#map {
+    display: block;
+    border: 1px solid #5B321E;
+}
+
+#contact span {
+    font-weight: 600;
+}
+
+.flex-container div#contact {
+    flex: 1;
+}
+
+.flex-container div#map {
+    flex: 1.4;
+}
+
+.form,
+.btnDiv {
+    text-align: center;
+    margin: 0.5rem;
+}
+
+.formInput,
+.form select {
+    padding: 1rem;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 1px 1px #5B321E;
+    outline: none;
+}
+
+.ui-datepicker {
+    width: 21rem;
+}
+
+#btnSubmit {
+    border-radius: 10px;
+    background-color: #864a2d;
+    color: #FFF;
+    padding: 10px 20px;
+    border: 1px solid #5B321E;
+    -webkit-transition-duration: 0.4s;
+    /* Safari */
+    transition-duration: 0.4s;
+}
+
+#btnSubmit:hover {
+    background-color: #5B321E;
+    color: white;
+}
+
+.options {
+    font-size: 1.5rem;
+}
+
+footer {
+    height: 30vh;
+    background-color: #5B321E;
+    display: block;
+}
+
+footer div {
+    color: white;
+    font-size: 1.2rem;
+    position: relative;
+    top: 10%;
+    left: 10%;
+    max-width: 90%;
+}
+
+footer div h3 {
+    width: 40%;
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.7rem;
+    border-bottom: 0.1rem dashed white;
+}
+
+#copyright {
+    color: white;
+    font-family: 'Lobster', cursive;
+    font-size: 0.8rem;
+    opacity: 0.8;
+    text-align: center;
+    position: relative;
+    top: 30%;
+}
+
+/*Media Queries*/
+
+@media (orientation: landscape) {
+    #navigation {
+        height: 15%;
+    }
+
+    #example_gallery {
+        position: relative;
+        top: 15%;
+    }
+
+    #navigation img {
+        transform: translateX(2rem);
+    }
+    .arrows {
+        transform: scale(1.3, 1.3);
+    }
+}
+
+@media (orientation: portrait) {}
+
+@media (max-width: 576px) {}
+
+@media (min-width: 768px) {}
+
+@media (min-width: 992px) {}
+
+@media (min-width: 1200px) {
+    .fa-bars {
+        display: none;
+    }
+    #navigation {
+        min-height: 92px;
+        /*to change*/
+    }
+    #navigation img {
+        transform: scale(1.7, 1.7);
+        position: relative;
+        top: 2rem;
+        left: 10rem;
+    }
+    #navigationList {
+        position: absolute;
+        right: 5%;
+        top: 40%;
+        display: inline-flex;
+    }
+    li {
+        display: inline;
+    }
+    li a {
+        display: inline;
+        padding: 8px 16px;
+        font-size: 1.8rem;
+        font-weight: 600;
+        background-color: #f1f1f1;
+    }
+    #mainInfo {
+        font-size: 2.5rem;
+    }
+
+    #mainInfo h3 {
+        margin-bottom: 4rem;
+    }
+
+    #mainInfo p {
+        margin: 2rem 10rem;
+    }
+
+    #rooms {
+        margin-top: 4rem;
+        width: 100%;
+    }
+
+    #rooms th {
+        width: 20%;
+    }
+
+    #rooms td,
+    #rooms th {
+        padding: 1.5rem;
+    }
+
+    #information {
+        font-size: 1.8rem;
+    }
+
+    .flex-container {
+        width: 100vh;
+
+        flex-direction: row;
+    }
+
+    .flex-container div {
+        flex-basis: 100%;
+        align-items: center;
+    }
+
+    .flex-container div#map {
+        flex: 1.6;
+    }
+
+    .ui-datepicker {
+        transform: scale(1.3);
+    }
+
+    footer div {
+        font-size: 1.6rem;
+    }
+
+    footer div h3 {
+        width: 18%;
+    }
+
+    #copyright {
+        font-size: 1.1rem;
+        position: relative;
+        top: 32%;
+    }
+}
