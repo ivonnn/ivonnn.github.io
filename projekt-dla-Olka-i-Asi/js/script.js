@@ -10,14 +10,16 @@ var timeout;
 changeSlides();
 showDivs(slideIndex);
 
-document.getElementById("arrowL").addEventListener("click", function () {
-    clearTimeout(timeout);
-    timeout = setTimeout(changeSlides, 4000);
-});
-document.getElementById("arrowR").addEventListener("click", function () {
-    clearTimeout(timeout);
-    timeout = setTimeout(changeSlides, 4000);
-});
+if (document.getElementById("arrowL") && document.getElementById("arrowL")) {
+    document.getElementById("arrowL").addEventListener("click", function () {
+        clearTimeout(timeout);
+        timeout = setTimeout(changeSlides, 4000);
+    });
+    document.getElementById("arrowR").addEventListener("click", function () {
+        clearTimeout(timeout);
+        timeout = setTimeout(changeSlides, 4000);
+    });
+}
 
 function plusDivs(n) {
     showDivs(slideIndex += n);
@@ -31,7 +33,9 @@ function showDivs(n) {
         slideIndex = x.length;
     }
     displayNone(x);
-    x[slideIndex - 1].style.display = "block";
+    if (x[slideIndex - 1]) {
+        x[slideIndex - 1].style.display = "block";
+    }
 }
 
 function changeSlides() {
@@ -40,7 +44,9 @@ function changeSlides() {
     if (slideIndex > x.length) {
         slideIndex = 1
     }
-    x[slideIndex - 1].style.display = "block";
+    if (x[slideIndex - 1]) {
+        x[slideIndex - 1].style.display = "block";
+    }
     timeout = setTimeout(changeSlides, 4000);
 }
 
@@ -94,9 +100,13 @@ function addMarker(map, latlong) {
 }
 
 $(function () {
-    $("#datepicker1").datepicker();
+    $("#datepicker1").datepicker({
+        dateFormat: "dd/mm/yy"
+    });
 });
 
 $(function () {
-    $("#datepicker2").datepicker();
+    $("#datepicker2").datepicker({
+        dateFormat: "dd/mm/yy"
+    });
 });

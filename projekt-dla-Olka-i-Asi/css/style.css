@@ -5,6 +5,7 @@
 }
 
 html {
+    font-family: "Roboto", sans-serif;
     font-size: 10px;
     display: block;
 }
@@ -53,12 +54,14 @@ header {
 #navigationList {
     display: none;
     list-style-type: none;
+    width: 60%;
     margin: 0;
     padding: 0;
     position: fixed;
     top: 10%;
     right: 0;
     z-index: 1;
+    text-align: center;
 }
 
 li a {
@@ -66,19 +69,13 @@ li a {
     display: block;
     color: #5B321E;
     padding: 8px 16px;
-    font-size: 1.6rem;
-    font-weight: 550;
-    background-color: #f1f1f1;
+    font-size: 2rem;
+    font-weight: 600;
+    background-color: white;
 }
 
-li a.active {
-    background-color: #5B321E;
-    color: white;
-}
-
-li a:hover:not(.active) {
-    background-color: #5B321E;
-    color: white;
+li a:hover {
+    border-bottom: 2px solid #5B321E;
 }
 
 #navigation img {
@@ -86,6 +83,13 @@ li a:hover:not(.active) {
 }
 
 #example_gallery {
+    position: relative;
+    top: 10%;
+    height: 90%;
+
+}
+
+#map {
     position: relative;
     top: 10%;
     height: 90%;
@@ -132,7 +136,7 @@ li a:hover:not(.active) {
 }
 
 main {
-    min-height: 90vh;
+    min-height: auto;
     background-color: white;
     position: relative;
     display: flex;
@@ -148,14 +152,18 @@ main {
 
 #mainInfo h3 {
     margin-bottom: 2rem;
+	font-family: 'Lobster', cursive;
     text-align: center;
-    font-family: 'Lobster', cursive;
+    text-transform: uppercase;
     color: #5B321E;
+    font-weight: 700;
+    font-size: 2.5rem;
 }
 
 #mainInfo h6 {
     text-align: center;
     margin-bottom: 1.5rem;
+    font-size: 2rem;
 }
 
 #mainInfo p {
@@ -163,7 +171,7 @@ main {
 }
 
 #information {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 
 #rooms {
@@ -196,14 +204,14 @@ main {
 
 .flex-container {
     display: flex;
-    height: 70vh;
+    height: auto;
     width: 100%;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .flex-container div {
-    flex-basis: 40%;
+    flex-basis: 60%;
     display: flex;
     align-items: flex-start;
     justify-content: center;
@@ -214,21 +222,40 @@ main {
     font-size: 2rem;
 }
 
-#map {
-    display: block;
-    border: 1px solid #5B321E;
+#contact {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #contact span {
     font-weight: 600;
 }
 
-.flex-container div#contact {
-    flex: 1;
+#registrationFormLink {
+    font-weight: 200;
+    font-size: 2rem;
+    color: red;
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
 }
 
-.flex-container div#map {
-    flex: 1.4;
+#registrationFormLink a {
+    text-decoration: none;
+    font-weight: 400;
+    color: red;
+    border-bottom: 2px solid red;
+}
+
+#localizationInfo {
+    margin-top: 2rem;
+    display: block;
+}
+
+
+#localizationInfo span p {
+    font-weight: 300;
+    font-size: 2rem;
 }
 
 .form,
@@ -348,7 +375,9 @@ footer div h3 {
         position: absolute;
         right: 5%;
         top: 40%;
+        width: auto;
         display: inline-flex;
+        text-align: right;
     }
     li {
         display: inline;
@@ -358,8 +387,8 @@ footer div h3 {
         padding: 8px 16px;
         font-size: 1.8rem;
         font-weight: 600;
-        background-color: #f1f1f1;
     }
+
     #mainInfo {
         font-size: 2.5rem;
     }
@@ -370,6 +399,14 @@ footer div h3 {
 
     #mainInfo p {
         margin: 2rem 10rem;
+    }
+
+    #contact p:first-child {
+        transform: scale(1.2);
+    }
+
+    #registrationFormLink {
+        margin-top: 6rem !important;
     }
 
     #rooms {
@@ -392,17 +429,18 @@ footer div h3 {
 
     .flex-container {
         width: 100vh;
-
         flex-direction: row;
     }
 
     .flex-container div {
         flex-basis: 100%;
         align-items: center;
+        justify-content: space-between;
     }
 
-    .flex-container div#map {
-        flex: 1.6;
+    #localizationInfo {
+        display: block;
+        margin-left: 1rem;
     }
 
     .ui-datepicker {
