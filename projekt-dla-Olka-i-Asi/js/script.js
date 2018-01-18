@@ -1,3 +1,13 @@
+/*###############################
+
+The MIT License
+
+ScrollReveal.js
+Copyright 2016 Julian Lloyd
+
+############################### */
+
+
 $(function () {
     $(".fa-bars").click(function () {
         $("#navigationList").slideToggle(500);
