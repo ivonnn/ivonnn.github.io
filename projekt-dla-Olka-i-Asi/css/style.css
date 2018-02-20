@@ -86,14 +86,13 @@ li a:hover {
     position: relative;
     top: 10%;
     height: 90%;
-	overflow: hidden;
+    overflow: hidden;
 }
 
 #map {
     position: relative;
     top: 10%;
     height: 90%;
-
 }
 
 .mySlides {
