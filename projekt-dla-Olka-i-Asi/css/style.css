@@ -25,7 +25,7 @@ section {
 }
 
 header {
-    height: 90vh;
+    height: 95vh;
     width: 100%;
     background-color: white;
     margin 0;
@@ -86,7 +86,7 @@ li a:hover {
     position: relative;
     top: 10%;
     height: 90%;
-
+	overflow: hidden;
 }
 
 #map {
@@ -98,6 +98,10 @@ li a:hover {
 
 .mySlides {
     height: 100%;
+    animation-name: increase;
+    animation-duration: 3s;
+    animation-timing-function: ease-out;
+    animation-delay: 1s;
 }
 
 .arrows {
@@ -327,6 +331,17 @@ footer div h3 {
     text-align: center;
     position: relative;
     top: 30%;
+}
+
+/*@keyframes*/
+
+@keyframes increase {
+    0% {
+        transform: scale(1.0);
+    }
+    100% {
+        transform: scale(1.2);
+    }
 }
 
 /*Media Queries*/
